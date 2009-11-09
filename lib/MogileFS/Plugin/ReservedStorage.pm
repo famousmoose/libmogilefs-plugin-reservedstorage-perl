@@ -13,10 +13,13 @@ use MogileFS::Util;
 
 sub conv_to_mb($) {
     my ($val) = @_;
-    my ($n, $u) = ($val =~ /^(\d+)\s*([kMGT])[bB]?$/) or return undef;
-    $n /= 1024 if $n eq 'k';
-    $n *= 1024 if $n eq 'G' || $n eq 'T';
-    $n *= 1024 if $n eq 'T';
+    return undef if not defined $val;
+    my ($n, $u) = ($val =~ /^(\d+(?:\.\d*))\s*([kMGT])[bB]?$/) 
+        or return undef;
+
+    $n /= 1024 if $u eq 'k';
+    $n *= 1024 if $u eq 'G' || $u eq 'T';
+    $n *= 1024 if $u eq 'T';
     return $n;
 }
 
@@ -38,7 +41,7 @@ sub sort_devs_by_freespace {
         next if $dev->mb_free < $mb_resrv;
         
         my $percent = ($dev->mb_free - $mb_resrv) / $dev->mb_free 
-           * $dev->precent_free;
+           * $dev->percent_free;
 
         my $weight = 100 * $percent;
         push @devices_with_weights, [$dev, $weight];
@@ -54,7 +57,7 @@ sub load {
         my $devices = shift;
         my $sorted_devs = shift;
 
-        @$sorted_devs = MogileFS::Worker::Query::sort_devs_by_freespace(@$devices);
+        @$sorted_devs = sort_devs_by_freespace(@$devices);
 
         return 1;
     });

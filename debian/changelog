@@ -1,6 +1,12 @@
+libmogilefs-plugin-reservedstorage-perl (0.00-2) unstable; urgency=low
+
+  * Fix a warning.
+
+ -- root <root@pandarus>  Mon, 5 Mar 2009 12:51:00 +0000
+
 libmogilefs-plugin-reservedstorage-perl (0.00-1) unstable; urgency=low
 
   * Initial Release.
 
- -- root <root@pandarus>  Mon, 2 Nov 2008 14:06:00 +0000
+ -- root <root@pandarus>  Mon, 2 Mar 2009 14:06:00 +0000
 
