@@ -1,0 +1,15 @@
+Source: libmogilefs-plugin-reservedstorage-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 5.0.0)
+Build-Depends-Indep: perl (>= 5.8.8-7etch3)
+Maintainer: root <root@pandarus>
+Standards-Version: 3.7.2
+
+Package: libmogilefs-plugin-reservedstorage-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, libmogilefs-network-perl (>= 0.01)
+Description: ReservedStorage plugin for mogilefs
+ ReservedStorage plugin for mogilefs
+ .
+ This description was automagically extracted from the module by dh-make-perl.

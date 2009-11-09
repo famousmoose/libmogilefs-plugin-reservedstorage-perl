@@ -1,0 +1,6 @@
+Revision history for Perl extension MogileFS-Plugin-ReservedStorage.
+
+0.01  Mon Mar 2 14:06:00 2008
+	- original version; created by h2xs 1.23 with options
+		-AXc -n MogileFS-Plugin-ReservedStorage
+
