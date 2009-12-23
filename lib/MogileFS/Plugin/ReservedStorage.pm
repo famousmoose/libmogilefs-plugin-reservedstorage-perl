@@ -39,6 +39,7 @@ sub sort_devs_by_freespace {
         $mb_resrv = 0 if not defined $mb_resrv;
 
         next if $dev->mb_free < $mb_resrv;
+        next if $dev->mb_free < 1;
         
         my $percent = ($dev->mb_free - $mb_resrv) / $dev->mb_free 
            * $dev->percent_free;
