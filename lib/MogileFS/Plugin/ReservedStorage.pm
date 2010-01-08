@@ -40,7 +40,7 @@ sub sort_devs_by_freespace {
 
         next if $dev->mb_free < $mb_resrv;
         
-        my $percent = ($dev->mb_free - $mb_resrv) / ($dev->mb_free + $dev->mb_used)
+        my $percent = ($dev->mb_free - $mb_resrv) / $dev->{mb_total};
         next if $percent <= 0;
 
         my $weight = 100 * $percent;

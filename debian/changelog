@@ -1,3 +1,9 @@
+libmogilefs-plugin-reservedstorage-perl (0.02-1) unstable; urgency=low
+
+  * Fix to reference the dev variables correctly 
+
+ -- stuart <stuart@we7.com>  Fri,  8 Jan 2010 16:19:58 +0000
+
 libmogilefs-plugin-reservedstorage-perl (0.01-1) unstable; urgency=low
 
   * Fix for divide by zero error
