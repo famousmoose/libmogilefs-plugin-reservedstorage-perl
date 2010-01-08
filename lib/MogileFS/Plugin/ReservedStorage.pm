@@ -39,10 +39,9 @@ sub sort_devs_by_freespace {
         $mb_resrv = 0 if not defined $mb_resrv;
 
         next if $dev->mb_free < $mb_resrv;
-        next if $dev->mb_free < 1;
         
-        my $percent = ($dev->mb_free - $mb_resrv) / $dev->mb_free 
-           * $dev->percent_free;
+        my $percent = ($dev->mb_free - $mb_resrv) / ($dev->mb_free + $dev->mb_used)
+        next if $percent <= 0;
 
         my $weight = 100 * $percent;
         push @devices_with_weights, [$dev, $weight];
