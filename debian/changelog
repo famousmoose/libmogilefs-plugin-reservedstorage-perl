@@ -1,3 +1,10 @@
+libmogilefs-plugin-reservedstorage-perl (0.01-1) unstable; urgency=low
+
+  * Fix for divide by zero error
+  * Minor version bumped in order that we're not version 0
+
+ -- stuart <stuart@we7.com>  Fri,  8 Jan 2010 11:51:39 +0000
+
 libmogilefs-plugin-reservedstorage-perl (0.00-2) unstable; urgency=low
 
   * Fix a warning.
