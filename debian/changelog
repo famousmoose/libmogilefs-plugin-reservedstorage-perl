@@ -1,3 +1,10 @@
+libmogilefs-plugin-reservedstorage-perl (0.03) unstable; urgency=low
+
+  * 2.36 Mogilefs server needs check for $dev->should_get_new_files;
+  * Change to being a native package
+
+ -- stuart <stuart@we7.com>  Thu, 13 May 2010 13:12:58 +0100
+
 libmogilefs-plugin-reservedstorage-perl (0.02-1) unstable; urgency=low
 
   * Fix to reference the dev variables correctly 
