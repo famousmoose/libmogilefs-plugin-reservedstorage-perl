@@ -1,3 +1,9 @@
+libmogilefs-plugin-reservedstorage-perl (0.04) lucid; urgency=low
+
+  * Mogilefs server 2.5x removes the $dev->exists method.
+
+ -- stuart <stuart@we7.com>  Thu, 05 Jan 2012 13:45:04 +0000
+
 libmogilefs-plugin-reservedstorage-perl (0.03) unstable; urgency=low
 
   * 2.36 Mogilefs server needs check for $dev->should_get_new_files;

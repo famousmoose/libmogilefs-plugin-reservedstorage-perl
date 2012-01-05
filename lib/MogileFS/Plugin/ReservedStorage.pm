@@ -31,7 +31,6 @@ sub sort_devs_by_freespace {
     my $default_reserved = conv_to_mb $sto->server_setting('reserved_storage');
 
     foreach my $dev (@_) {
-        next unless $dev->exists;
         next unless $dev->should_get_new_files;
 
         my $mb_resrv = conv_to_mb 
